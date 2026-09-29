@@ -27,10 +27,10 @@ describe('profile', () => {
 
   it('accepts forgiving YAML: nulls, single strings, string years', () => {
     const file = path.join(tempHome(), 'profile.yaml');
-    fs.writeFileSync(file, 'keywords: robotics\nclubs:\ngrad_year: "2028"\nschools: [{ name: U of T, linkedin: university-of-toronto }]\n');
+    fs.writeFileSync(file, 'keywords: robotics\nclubs:\ngrad_year: "2028"\nschools: [{ name: Example U, linkedin: example-university }]\n');
     expect(loadProfile(file).profile).toMatchObject({
       keywords: ['robotics'], clubs: [], gradYear: 2028,
-      schools: [{ name: 'U of T', linkedinSlug: 'university-of-toronto' }],
+      schools: [{ name: 'Example U', linkedinSlug: 'example-university' }],
     });
   });
 
@@ -44,9 +44,9 @@ describe('profile', () => {
   it('updates fields while keeping the comments a person wrote', () => {
     const file = path.join(tempHome(), 'profile.yaml');
     initProfile(file, EXAMPLE);
-    const updated = updateProfile(file, { keywords: ['satellites', 'rf'], clubs: ['UTAT'], hometown: null });
+    const updated = updateProfile(file, { keywords: ['satellites', 'rf'], clubs: ['Example Robotics Club'], hometown: null });
     expect(updated.keywords).toEqual(['satellites', 'rf']);
-    expect(updated.clubs).toEqual(['UTAT']);
+    expect(updated.clubs).toEqual(['Example Robotics Club']);
     const text = fs.readFileSync(file, 'utf8');
     expect(text).toContain('# Words that make a posting a good fit.');
     expect(text).toContain('- satellites');
@@ -55,8 +55,8 @@ describe('profile', () => {
 
   it('creates the file from the template on first update, and rejects unknown fields', () => {
     const file = path.join(tempHome(), 'nested', 'profile.yaml');
-    updateProfile(file, { name: 'Tolu' }, EXAMPLE);
-    expect(loadProfile(file).profile.name).toBe('Tolu');
+    updateProfile(file, { name: 'Sam' }, EXAMPLE);
+    expect(loadProfile(file).profile.name).toBe('Sam');
     expect(fs.readFileSync(file, 'utf8')).toContain('# internBuddy profile');
     expect(() => updateProfile(file, { nope: 1 } as never)).toThrow(/Unknown profile field/);
   });

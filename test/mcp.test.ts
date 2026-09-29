@@ -70,8 +70,8 @@ describe('MCP server', () => {
     expect(detail.text).toMatch(/Match: score [\d.]+ — /);
 
     const people = await call('suggest_connections', { id });
-    expect(people.text).toContain('University of Toronto alumni at');
-    expect(people.text).toContain('https://www.linkedin.com/school/university-of-toronto/people/?keywords=');
+    expect(people.text).toContain('Example University alumni at');
+    expect(people.text).toContain('https://www.linkedin.com/school/example-university/people/?keywords=');
     expect(people.text).toContain('never contacts LinkedIn');
 
     expect((await call('set_status', { id, state: 'saved', notes: 'ask about ROS' })).text).toContain('marked saved');

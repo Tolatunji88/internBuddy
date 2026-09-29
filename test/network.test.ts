@@ -39,8 +39,8 @@ describe('targetsFor', () => {
 describe('connectionLinks', () => {
   const profile: Profile = {
     keywords: [], skills: [], roleTypes: [], excludeKeywords: [], locations: [], includeNewGrad: false,
-    schools: [{ name: 'University of Toronto', linkedinSlug: 'university-of-toronto' }, { name: 'Lawrenceville School' }],
-    clubs: ['UTAT'], pastEmployers: ['Geotab'], hometown: 'Toronto',
+    schools: [{ name: 'Example University', linkedinSlug: 'example-university' }, { name: 'Example Academy' }],
+    clubs: ['Example Robotics Club'], pastEmployers: ['Northwind Systems'], hometown: 'Toronto',
   };
   const links = connectionLinks({ company: 'Kepler', title: 'Firmware Engineering Intern' }, profile);
 
@@ -50,14 +50,14 @@ describe('connectionLinks', () => {
   });
 
   it('builds LinkedIn search URLs with quoted, encoded keywords', () => {
-    expect(links[0]?.url).toBe(alumniPageUrl('university-of-toronto', 'Kepler'));
-    expect(links[0]?.url).toBe('https://www.linkedin.com/school/university-of-toronto/people/?keywords=Kepler');
-    expect(links[1]?.url).toBe(peopleSearchUrl('"Kepler" "Lawrenceville School"'));
-    expect(decodeURIComponent(links[1]?.url ?? '')).toContain('keywords="Kepler" "Lawrenceville School"');
+    expect(links[0]?.url).toBe(alumniPageUrl('example-university', 'Kepler'));
+    expect(links[0]?.url).toBe('https://www.linkedin.com/school/example-university/people/?keywords=Kepler');
+    expect(links[1]?.url).toBe(peopleSearchUrl('"Kepler" "Example Academy"'));
+    expect(decodeURIComponent(links[1]?.url ?? '')).toContain('keywords="Kepler" "Example Academy"');
   });
 
   it('does not suggest ex-colleagues at the company you worked for', () => {
-    const own = connectionLinks({ company: 'Geotab', title: 'Intern' }, profile);
+    const own = connectionLinks({ company: 'Northwind Systems', title: 'Intern' }, profile);
     expect(own.some((l) => l.kind === 'employer')).toBe(false);
   });
 });

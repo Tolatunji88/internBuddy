@@ -16,8 +16,8 @@ function job(id: number, over: Partial<StoredJob>): StoredJob {
 
 const profile: Profile = {
   keywords: ['embedded', 'firmware'], skills: ['python', 'ros'], roleTypes: ['hardware'], excludeKeywords: ['sales'],
-  locations: ['gta', 'ontario', 'remote-canada'], gradYear: 2028, schools: [{ name: 'University of Toronto' }],
-  clubs: ['UTAT'], pastEmployers: ['Geotab'], includeNewGrad: false,
+  locations: ['gta', 'ontario', 'remote-canada'], gradYear: 2028, schools: [{ name: 'Example University' }],
+  clubs: ['Example Robotics Club'], pastEmployers: ['Northwind Systems'], includeNewGrad: false,
 };
 
 describe('DeterministicRanker', () => {
@@ -61,11 +61,13 @@ describe('DeterministicRanker', () => {
 
   it('boosts past employers, schools and clubs', () => {
     const [r] = ranker.rank(
-      [job(1, { company: 'Geotab Inc.', description: 'We hire from the University of Toronto and UTAT.' })],
+      [job(1, { company: 'Northwind Systems Inc.', description: 'We hire from Example University and the Example Robotics Club.' })],
       profile,
       NOW,
     );
-    expect(r?.reasons).toEqual(expect.arrayContaining(["you've worked at Geotab", 'mentions University of Toronto', 'mentions UTAT']));
+    expect(r?.reasons).toEqual(
+      expect.arrayContaining(["you've worked at Northwind Systems", 'mentions Example University', 'mentions Example Robotics Club']),
+    );
   });
 
   it('penalizes stale postings', () => {

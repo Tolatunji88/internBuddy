@@ -61,9 +61,9 @@ exclude_keywords: [sales]
 locations: [gta, ontario, remote-canada]
 grad_year: 2028
 schools:
-  - name: University of Toronto
-    linkedin: university-of-toronto
-clubs: [University of Toronto Aerospace Team]
+  - name: Example University
+    linkedin: example-university
+clubs: [Example Robotics Club]
 past_employers: [Example Lever Co]
 hometown: Toronto
 `;

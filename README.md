@@ -46,7 +46,7 @@ claude mcp add --scope user internbuddy -- node "$(pwd)/dist/mcp/main.js"
 
 Then start `claude`, check `/mcp` shows internbuddy connected, and run the daily review prompt
 (`/mcp__internbuddy__daily_review`) or just ask: *"what's new today?"*, *"who should I talk to
-about the Geotab co-op?"*, *"draft a note to a UTAT alum there"*.
+about the Geotab co-op?"*, *"draft a note to someone from my design team there"*.
 
 ## Commands
 
