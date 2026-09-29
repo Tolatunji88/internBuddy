@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+
+# Personal data: never commit
+config/profile.yaml
+*.db
+*.db-wal
+*.db-shm
+out/
+reports/
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+*.log

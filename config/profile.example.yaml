@@ -1,0 +1,68 @@
+# internBuddy profile
+#
+# This file lives on your computer only (run `internbuddy where` to see the path). It never
+# goes in the repo. Edit it by hand, or ask your agent to change it for you — comments survive.
+
+name: Your Name
+
+# ---- What you're looking for -------------------------------------------------------------
+
+# Words that make a posting a good fit. A match in the title counts three times as much as
+# one in the description, and rare words count more than common ones.
+keywords:
+  - embedded
+  - robotics
+  - firmware
+
+# Tools and languages. Scored the same way as keywords.
+skills:
+  - python
+  - c++
+
+# Broad areas you'd take a role in. A title containing one gets a boost.
+role_types:
+  - software
+  - hardware
+  - electrical
+
+# Postings whose TITLE contains any of these are hidden entirely.
+exclude_keywords:
+  - sales
+
+# Where you'd work. Shorthands:
+#   gta            Toronto and surrounding cities
+#   ontario        anywhere in Ontario (includes the GTA)
+#   remote-canada  remote roles open to people in Canada
+#   canada         anywhere in Canada
+#   remote         remote anywhere (often US-only; off unless you list it)
+# Anything else matches as a place name: waterloo, montreal, new york, ...
+locations:
+  - gta
+  - ontario
+  - remote-canada
+
+# Your expected graduation year. Postings that mention it get a small boost.
+grad_year: 2028
+
+# internBuddy shows internships, co-ops, PEY and other student roles. Set this to true if
+# you're graduating and also want full-time new-grad roles.
+include_new_grad: false
+
+# ---- Who you are: these build the "people to talk to" links -------------------------------
+
+# Each school becomes a LinkedIn search for people at the company who went there.
+# Add `linkedin:` (the part after linkedin.com/school/ on the school's LinkedIn page) and you
+# also get a link to that school's alumni page filtered to the company.
+schools:
+  - name: University of Toronto
+    # linkedin: <slug from linkedin.com/school/<slug>>
+
+# Clubs, design teams, societies. Former members at a company are warm introductions.
+clubs: []
+#  - University of Toronto Aerospace Team
+
+# Places you've worked or interned. Coworkers who moved on are some of your best contacts.
+past_employers: []
+
+# Where you're from. The weakest tie of the lot, but sometimes the one that starts a chat.
+hometown:

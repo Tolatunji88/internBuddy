@@ -1,0 +1,42 @@
+{
+  "apiVersion": "1",
+  "jobs": [
+    {
+      "id": "b7c1e2d3-0000-4000-9000-000000000001",
+      "title": "Robotics Research Intern",
+      "location": "Toronto",
+      "secondaryLocations": [{ "location": "Montreal" }],
+      "department": "Research",
+      "team": "Manipulation",
+      "isListed": true,
+      "isRemote": false,
+      "workplaceType": "OnSite",
+      "employmentType": "Intern",
+      "publishedAt": "2026-09-27T14:00:00.000Z",
+      "jobUrl": "https://jobs.ashbyhq.com/exampleashby/b7c1e2d3-0000-4000-9000-000000000001",
+      "descriptionPlain": "Work on robot learning with ROS and Python.",
+      "address": { "postalAddress": { "addressLocality": "Toronto", "addressRegion": "Ontario", "addressCountry": "Canada" } }
+    },
+    {
+      "id": "b7c1e2d3-0000-4000-9000-000000000002",
+      "title": "Hidden Intern Role",
+      "location": "Toronto",
+      "isListed": false,
+      "employmentType": "Intern",
+      "publishedAt": "2026-09-27T14:00:00.000Z",
+      "jobUrl": "https://jobs.ashbyhq.com/exampleashby/b7c1e2d3-0000-4000-9000-000000000002",
+      "descriptionPlain": "Should never be ingested."
+    },
+    {
+      "id": "b7c1e2d3-0000-4000-9000-000000000003",
+      "title": "Software Engineer",
+      "location": "Vancouver",
+      "isListed": true,
+      "isRemote": false,
+      "employmentType": "FullTime",
+      "publishedAt": "2026-08-01T14:00:00.000Z",
+      "jobUrl": "https://jobs.ashbyhq.com/exampleashby/b7c1e2d3-0000-4000-9000-000000000003",
+      "descriptionHtml": "<p>Backend &amp; infra.</p>"
+    }
+  ]
+}

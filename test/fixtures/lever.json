@@ -1,0 +1,41 @@
+[
+  {
+    "id": "a1b2c3d4-0000-4000-8000-000000000001",
+    "text": "Embedded Software Developer",
+    "hostedUrl": "https://jobs.lever.co/examplelever/a1b2c3d4-0000-4000-8000-000000000001",
+    "applyUrl": "https://jobs.lever.co/examplelever/a1b2c3d4-0000-4000-8000-000000000001/apply",
+    "createdAt": 1790000000000,
+    "workplaceType": "hybrid",
+    "categories": {
+      "commitment": "Co-op",
+      "department": "Engineering",
+      "team": "Devices",
+      "location": "Waterloo, ON",
+      "allLocations": ["Waterloo, ON", "Toronto, ON"]
+    },
+    "descriptionPlain": "Four-month co-op on our device firmware team.",
+    "description": "<div>Four-month co-op on our device firmware team.</div>",
+    "lists": [{ "text": "What you'll need", "content": "<li>C or C++</li><li>RTOS familiarity</li>" }],
+    "additionalPlain": "We welcome applicants from all backgrounds."
+  },
+  {
+    "id": "a1b2c3d4-0000-4000-8000-000000000002",
+    "text": "Product Design Intern",
+    "hostedUrl": "https://jobs.lever.co/examplelever/a1b2c3d4-0000-4000-8000-000000000002",
+    "createdAt": 1789000000000,
+    "workplaceType": "onsite",
+    "categories": { "commitment": "Internship", "department": "Design", "location": "New York, NY" },
+    "descriptionPlain": "Figma.",
+    "lists": []
+  },
+  {
+    "id": "a1b2c3d4-0000-4000-8000-000000000003",
+    "text": "Data Analyst",
+    "hostedUrl": "https://jobs.lever.co/examplelever/a1b2c3d4-0000-4000-8000-000000000003",
+    "createdAt": 1789500000000,
+    "workplaceType": "remote",
+    "categories": { "commitment": "Full-time", "department": "Analytics", "location": "Canada" },
+    "descriptionPlain": "SQL.",
+    "lists": []
+  }
+]
